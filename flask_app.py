@@ -8,9 +8,17 @@ from manu import manu, record
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://kirolan:msQl1234@kirolan.mysql.pythonanywhere-services.com/weather_opm_daily'
+
+SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+    username="kirolan",
+    password="msQl1234",
+    hostname="kirolan.mysql.pythonanywhere-services.com",
+    databasename="kirolan$weather_opm_daily"
+)
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 280
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
 
 
