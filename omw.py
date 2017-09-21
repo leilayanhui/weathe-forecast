@@ -239,4 +239,5 @@ def main(location):
 
 
 if __name__ == "__main__":
-    db.create_all()
+    user_enter=input("> ")
+    main(user_enter)
