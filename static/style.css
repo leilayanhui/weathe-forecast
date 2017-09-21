@@ -90,6 +90,10 @@ form {
     font-size: 1em;
     color: #fff;
 }
+.weather-grids h5 {
+    font-size: 0.8em;
+    color: #fff;
+}
 .weather-bottom {
     text-align: center;
     margin-top: 2em;
@@ -106,10 +110,12 @@ form {
 .weather-bottom h4 {
     font-size: 1em;
     color: #fff;
-    font-weight: 100;
+    font-weight: 80;
+
 }
 figure.icons {
     margin: 0.5em 0;
+    margin-bottom: 1em;
 }
 .weather-bottom h5 {
     font-size: 0.8em;
